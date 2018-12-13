@@ -2,9 +2,6 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import AbstractUser
-from django.contrib.auth import get_user_model
-
-User = get_user_model()
 
 
 class User(AbstractUser):
@@ -23,7 +20,7 @@ class Follow(models.Model):
     followed_user = models.ForeignKey(
         to=User, on_delete=models.CASCADE, related_name="follows_to"
     )
-    created_at = models.DateTimeField(auto_now_add=True, null=False)
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
 
 
 class Hoot(models.Model):
