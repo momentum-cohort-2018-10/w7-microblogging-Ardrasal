@@ -9,6 +9,8 @@ verify_ssl = true
 django = "*"
 django-debug-toolbar = "*"
 psycopg2 = "*"
+djangorestframework = "*"
+django-extensions = "*"
 
 [requires]
 python_version = "3.7"
